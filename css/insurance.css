@@ -1,0 +1,374 @@
+/*=================
+===== STYLING =====
+=================*/
+{
+  border-style:   dashed;
+  border-color:   blue;
+}
+*,
+*:before,
+*:after {
+  padding: 0px;
+  margin: 0px;
+  transition: 0.3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+	text-align: center;
+	overflow-x: hidden;
+}
+section,
+header {
+	background-size: cover;
+}
+@-webkit-viewport {
+	width: device-width;
+}
+@-moz-viewport {
+	width: device-width;
+}
+@-ms-viewport {
+	width: device-width;
+}
+@-o-viewport {
+	width: device-width;
+}
+@viewport {
+	width: device-width;
+}
+ul,
+ol {
+	list-style-type: none;
+}
+a {
+  color: white;
+	text-decoration: none;
+	display: inline-block;
+}
+.wrapper {
+	position: relative;
+	max-width: 1200px;
+	margin: auto;
+	padding-top: 75px;
+	padding-bottom: 75px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 0px;
+}
+.color-overlay {
+	background: rgba(255, 255, 255, 0.7);
+}
+.main-line {
+	height: 1px;
+	width: 200px;
+	margin: auto;
+	margin-bottom: 50px;
+	margin-top: 25px;
+	color: gray;
+}
+/*================
+====== FONTS =====
+================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #386080;
+}
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+  text-align: left;
+  font-weight: 400;
+}
+h2 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 5%;
+  text-align: center;
+}
+h4 {
+	font-size: 1.25em;
+  font-weight: 500;
+  text-align: center;
+}
+h5 {
+	font-size: 16px;
+	margin-bottom: 7px;
+}
+h6 {
+  font-size: 1.5rem;
+  color: gray;
+  text-align: left;
+}
+p {
+  font-size: 1rem;
+  color: #505050;
+  line-height: 1.5;
+  text-align: center;
+}
+::-moz-selection {
+	color: #fff;
+}
+::selection {
+	color: #fff;
+}
+/*=================
+===== COLUMNS =====
+=================*/
+.col-3,
+.col-4,
+.col-6,
+.col-8,
+.col-9,
+.col-12,
+.col-9 + .col-3 {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 1rem;
+	vertical-align: top;
+	width: 100%;
+}
+.col-3 img,
+.col-4 img,
+.col-6 img,
+.col-8 img,
+.col-9 img,
+.col-12 img {
+	max-width: 100%;
+}
+.col-3 p,
+.col-4 p,
+.col-6 p,
+.col-8 p,
+.col-9 p,
+.col-12 p {
+	margin-bottom: 20px;
+}
+.text-center,
+.text-right,
+.text-left  {
+	text-align: center;
+}
+/*=================
+===== BUTTONS =====
+=================*/
+.button {
+  position:relative;
+  cursor: pointer;
+  padding: 20px;
+  background-image: linear-gradient(to right, #7dcad2 10%, #5394ac 60%, #386080 100%);
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  transition: transform 200ms ease-in-out;
+}
+.button-action-width {
+  width: 15%;
+  margin: auto;
+}
+.button-width{
+  width: 60%;
+  margin: auto;
+  margin-top: 10%;
+}
+.button-box{
+  padding: 0 0 5% 0;
+}
+.button:hover {
+  position: relative;
+  background: #7dcad2;
+}
+.button a {
+    font-weight:bold;
+}
+.button:before,
+.button:after {
+    content:"";
+    position:absolute;
+    z-index:-1;
+}
+.lifted {
+    -moz-border-radius:4px;
+    border-radius:4px;
+    backface-visibility: hidden;
+}
+.lifted:after {
+    bottom:15px;
+    right:20px;
+    left:auto;
+    width:40%;
+    height:20%;
+    -webkit-box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    -webkit-transform:rotate(8deg);
+    -moz-transform:rotate(8deg);
+    -ms-transform:rotate(8deg);
+    -o-transform:rotate(8deg);
+    transform:rotate(8deg);
+}
+.modalDialog, .modalDialogWhy, .modalDialogUnique {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target, .modalDialogWhy:target, .modalDialogUnique:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 75%;
+	position: relative;
+	margin: 10% auto;
+	padding: 2%;
+	background: #fff;
+}
+.modalDialogWhy > div {
+	width: 75%;
+	position: relative;
+	margin: 10% auto;
+	padding: 2%;
+	background: #fff;
+}
+.modalDialogUnique > div {
+	width: 75%;
+	position: relative;
+	margin: 10% auto;
+	padding: 2%;
+	background: #fff;
+}
+.close {
+	background: #386080;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #7dcad2; }
+.button img {
+  width: 15%;
+  vertical-align: middle;
+  margin-left: 5%;
+}
+.icon-box {
+	display: inline-block;
+	width: 200px;
+	padding: 0px;
+	margin-bottom: 50px;
+	font-size: 1rem;
+	vertical-align: middle;
+}
+/* =======================
+===== INSURANCE-HERO =====
+======================= */
+
+.insurance-hero {
+	background-image: url(http://www.rockymountainasa.com/images/hero/insurance-hero.jpg);
+}
+
+.insurance-hero .color-overlay {
+	background: rgba(255, 255, 255, 0.8);
+	height: 600px;
+}
+
+.insurance-hero .wrapper {
+	padding-top: 160px;
+	padding-bottom: 100px;
+}
+
+.insurance-hero h1 {
+  margin-top: 80px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+.insurance-hero p {
+  font-size: 1.5rem;
+  color: gray;
+  text-align: left;
+}
+
+/* ==================
+===== INSURANCE =====
+================== */
+.insurance {
+  padding: 5%;
+}
+.insurance .icon-box img {
+ padding-top: 50px;
+ opacity: 0.8;
+ vertical-align: middle;
+}
+.insurance a{
+  color: #7dcad2;
+}
+/*===============
+===== MEDIA =====
+===============*/
+@media only screen
+and (max-device-width: 480px)
+and (orientation: portrait) {
+  /*---media-home---*/
+  .insurance-hero {
+    background-repeat: no-repeat;
+    background-position: -150px 75px;
+    height: 525px;
+    overflow: hidden;
+  }
+  .insurance-hero .color-overlay .wrapper {
+    padding-top: 100px;
+  }
+  .insurance-hero h1 {
+  	font-size: 2rem;
+  }
+  .insurance-hero p {
+  	font-size: 1rem;
+  }
+  .call-to-action .button-box .button-action-width {
+    width: 50%;
+    margin: auto;
+  }
+}
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+}

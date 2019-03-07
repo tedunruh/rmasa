@@ -1,0 +1,175 @@
+
+@media (min-width: 340px)  {
+	.icon-box {
+		width: 300px;
+		padding: 0px 50px;
+	}
+}
+@media (min-width: 480px)  {
+	.col-3 {
+		width: 50%;
+	}
+	.text-left {
+		text-align: left;
+	}
+	.text-center {
+		text-align: center;
+	}
+	.text-right {
+		text-align: right;
+	}
+	.list-content {
+		height: 50px;
+	}
+	.icon i {
+		width: 50px;
+		height: 50px;
+	}
+@media (min-width: 550px)  {
+	.package {
+		width: 400px;
+	}
+	.skill {
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+}
+
+@media (min-width: 650px)  {
+	.col-4 {
+		width: 33.3333%;
+	}
+	.col-8 {
+		width: 66.6666%;
+	}
+	.contact form .col-6 {
+		width: 50%;
+	}
+	.contact form {
+		border: 1px solid #fff;
+		padding: 40px;
+	}
+}
+@media (min-width: 702px)  {
+	.contact .styled-icon-list {
+		display: block;
+		text-align: center;
+	}
+	.contact .styled-icon-list li {
+		display: inline-block;
+		margin-bottom: 0;
+		margin-left: 20px;
+	}
+	.contact .styled-icon-list li:first-child {
+		margin-left: 0;
+	}
+}
+@media (min-width: 767px)  {
+.col-3 {
+		width: 25%;
+	}
+	.col-9 + .col-3 {
+		width: 25%;
+	}
+	.home .wrapper {
+		padding-top: 277px;
+		padding-bottom: 180px;
+	}
+	.package {
+		width: 260px;
+		margin-bottom: 0px;
+	}
+	.main-package {
+		width: 300px;
+	}
+	.package:first-child {
+		margin-right: -50px;
+	}
+	.package:last-child {
+		margin-left: -50px;
+	}
+
+	.circular-pricing-table .package:last-child {
+		margin-left: -175px;
+	}
+	.subscribe input[type=email] {
+		width: 400px;
+		margin-right: 20px;
+	}
+}
+@media (min-width: 930px)  {
+	.navigation-logo {
+		height: 20px;
+	}
+
+
+
+	.home .wrapper {
+		padding-top: 246px;
+		padding-bottom: 180px;
+	}
+}
+
+@media (min-width: 1040px)  {
+	.circular-pricing-table {
+		min-height: 0;
+	}
+
+	.package {
+		width: 350px;
+	}
+
+	.main-package {
+		width: 400px;
+	}
+
+	.circular-pricing-table .package {
+		position: relative;
+		left: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	.circular-pricing-table .main-package {
+		margin-left: 0;
+		top: 0;
+	}
+
+	.circular-pricing-table .package:last-child {
+		margin-left: -50px;
+		top: 0;
+	}
+}
+
+@media (min-width: 1090px)  {
+	.icon-boxes {
+		max-width: 100%;
+	}
+
+	.icon-boxes:after {
+		display: block;
+	}
+
+	.icon-box {
+		width: 260px;
+		padding: 0px 30px;
+		margin-bottom: 0px;
+	}
+
+	.navigation .btn-container {
+		display: inline-block;
+	}
+}
+@media (min-width: 1160px)  {
+	.team .wrapper {
+		max-width: none;
+	}
+
+	.single-member {
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 1240px)  {
+	.skills .wrapper {
+		max-width: none;
+	}
+}

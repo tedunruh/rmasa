@@ -1,0 +1,437 @@
+/*=================
+===== STYLING =====
+=================*/
+
+{
+ border-style:   dashed;
+ border-color:   blue;
+}
+
+*,
+*:before,
+*:after {
+	padding: 0px;
+	margin: 0px;
+	transition: 0.3s;
+}
+
+html {
+	font-size: 14px;
+}
+
+body {
+	text-align: center;
+	overflow-x: hidden;
+}
+
+/*===============
+===== MEDIA =====
+===============*/
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: portrait) {
+
+/*---media-home---*/
+
+.hero {
+  background-repeat: no-repeat;
+  background-position: -150px 75px;
+  height: 475px;
+  overflow: hidden;
+}
+
+.hero .color-overlay .wrapper {
+  padding-top: 100px;
+}
+
+.hero h1 {
+	font-size: 2rem;
+}
+
+.hero p {
+	font-size: 1rem;
+}
+
+.about {
+  height: 100%;
+  background-position: right;
+}
+
+.about .icon-box-about {
+ display: inline-block;
+ width: 100%;
+ padding: 40px;
+ margin-top: 545px;
+ margin-left: 0
+}
+
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+.about {
+	background-size: 1000px;
+	background-position: right;
+}
+
+.about .icon-box-about {
+ display: inline-block;
+ width: 100%;
+ padding: 40px;
+ margin-top: 545px;
+ margin-left: 0
+}
+
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 640px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .about .icon-box-about {
+   display: inline-block;
+   width: 100%;
+   padding: 40px;
+   margin-top: 545px;
+   margin-left: 0
+  }
+
+}
+
+/*==============================
+===== ANCHOR AND BOLD TEXT =====
+==============================*/
+
+a {
+  color: #505050;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover {
+	color: #2c3e50;
+}
+
+/*=======================
+===== BROWSER FIXES =====
+=======================*/
+
+@-webkit-viewport {
+	width: device-width;
+}
+
+@-moz-viewport {
+	width: device-width;
+}
+
+@-ms-viewport {
+	width: device-width;
+}
+
+@-o-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #2c3e50;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #2c3e50;
+   opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #2c3e50;
+   opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: #2c3e50;
+}
+
+/*================
+====== FONTS =====
+================*/
+
+* {
+	font-family: "raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #386080;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+  text-align: left;
+  font-weight: 400;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2rem;
+	font-weight: 300;
+}
+
+h4 {
+	font-size: 1.8px;
+}
+
+h5 {
+	font-size: 16px;
+	margin-bottom: 7px;
+}
+
+h6 {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+p {
+	color: #505050;
+	line-height: 1.5;
+	text-align: center;
+}
+
+::-moz-selection {
+	color: #fff;
+}
+
+::selection {
+	color: #fff;
+}
+
+/*===============
+===== LISTS =====
+===============*/
+
+.list,
+.icon-list,
+.styled-icon-list {
+	padding-left: 40px;
+	margin-bottom: 20px;
+	font-size: 1rem;
+}
+
+.styled-icon-list {
+	padding-left: 0px;
+}
+
+ol.list {
+	list-style: decimal;
+}
+
+ol.list ol.list {
+	margin-bottom: 0px;
+}
+
+ul.list li:before {
+	content: "";
+	display: inline-block;
+	position: relative;
+	left:-15px;
+	top:-3px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.icon-list i {
+	margin-right: 10px;
+}
+
+.styled-icon-list li {
+	margin-bottom: 10px;
+}
+
+.styled-icon-list .icon {
+	float: left;
+	margin-right: 10px;
+}
+
+.list-content {
+	display: table-cell;
+	height: 40px;
+	vertical-align: middle;
+}
+
+/*=================
+===== COLUMNS =====
+=================*/
+
+.col-3,
+.col-4,
+.col-6,
+.col-8,
+.col-9,
+.col-12,
+.col-9 + .col-3 {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 1rem;
+	vertical-align: top;
+	width: 100%;
+}
+
+.col-3 img,
+.col-4 img,
+.col-6 img,
+.col-8 img,
+.col-9 img,
+.col-12 img {
+	max-width: 100%;
+}
+
+.col-3 p,
+.col-4 p,
+.col-6 p,
+.col-8 p,
+.col-9 p,
+.col-12 p {
+	margin-bottom: 20px;
+}
+
+.text-center,
+.text-right,
+.text-left  {
+	text-align: center;
+}
+
+/* ================
+===== BUTTONS =====
+=================*/
+
+input[type=submit],
+input[type=button],
+input[type=reset],
+button,
+.btn {
+	position: relative;
+	z-index: 100;
+	padding: 15px 20px;
+	cursor: pointer;
+	font-size: 1.2rem;
+  color: white;
+	text-transform: uppercase;
+	background: transparent;
+}
+
+input[type=submit],
+input[type=button],
+input[type=reset],
+button,
+.standard-btn {
+	display: inline-block;
+	position: absolute;
+  background: #386080;
+  background: -webkit-linear-gradient(left, #7dcad2 , #386080); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #7dcad2 , #386080); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #7dcad2 , #386080); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #7dcad2 , #386080); /* Standard syntax */
+  border-radius: 20px;
+  display: flex;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+/* =================================================
+===== STYLING, WRAPPER, COLOR OVERLAY AND LINE =====
+================================================= */
+
+section,
+header {
+	background-size: cover;
+}
+
+.wrapper {
+	position: relative;
+	max-width: 1200px;
+	margin: auto;
+	padding-top: 75px;
+	padding-bottom: 75px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 0px;
+}
+
+.color-overlay {
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.main-line {
+	height: 1px;
+	width: 200px;
+	margin: auto;
+	margin-bottom: 50px;
+	margin-top: 25px;
+	color: gray;
+}
+
+/*==============
+===== HERO =====
+==============*/
+
+.hero {
+	background-image: url(http://www.rockymountainasa.com/images/hero/hero.jpg);
+}
+
+.hero .color-overlay {
+	background: rgba(255, 255, 255, 0.8);
+	height: 600px;
+}
+
+.hero .wrapper {
+	padding-top: 160px;
+	padding-bottom: 100px;
+}
+
+.hero h1 {
+  margin-top: 80px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: gray;
+  text-align: left;
+}

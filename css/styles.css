@@ -1,0 +1,942 @@
+/*=================
+===== STYLING =====
+=================*/
+{
+ border-style:   dashed;
+ border-color:   blue;
+}
+*,
+*:before,
+*:after {
+ padding: 0px;
+ margin: 0px;
+ transition: 0.3s;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+body, html{
+  height: 100%;
+}
+html {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+	text-align: center;
+	overflow-x: hidden;
+}
+section,
+header {
+	background-size: cover;
+}
+@-webkit-viewport {
+	width: device-width;
+}
+@-moz-viewport {
+	width: device-width;
+}
+@-ms-viewport {
+	width: device-width;
+}
+@-o-viewport {
+	width: device-width;
+}
+@viewport {
+	width: device-width;
+}
+ul,
+ol {
+	list-style-type: none;
+}
+a {
+  color: white;
+	text-decoration: none;
+	display: inline-block;
+}
+.wrapper {
+	padding: 2%;
+}
+.color-overlay {
+	background: rgba(0, 0, 0, 0.4);
+}
+.main-line {
+	height: 1px;
+	width: 200px;
+	margin: auto;
+	margin-bottom: 50px;
+	margin-top: 25px;
+	color: gray;
+}
+/*================
+====== FONTS =====
+================*/
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #386080;
+  font-weight: 500;
+}
+h1 {
+	font-size: 3rem;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  text-align: left;
+}
+h2 {
+	font-size: 2.25rem;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+h3 {
+  font-size: 2rem;
+  padding: 3%;
+  text-align: center;
+}
+h4 {
+	font-size: 1.75em;
+  font-weight: 600;
+  text-align: center;
+}
+h5 {
+ font-size: 1.5rem;
+ padding-top: 2%;
+ text-align: left;
+ color: white;
+}
+h6 {
+  font-size: 1.125rem;
+  text-align: left;
+}
+p {
+  font-size: 1rem;
+  color: #383838;
+  line-height: 1.5;
+  text-align: center;
+}
+::-moz-selection {
+	color: #fff;
+}
+::selection {
+	color: #fff;
+}
+/*=================
+===== COLUMNS =====
+=================*/
+.col-3,
+.col-4,
+.col-6,
+.col-8,
+.col-9,
+.col-12,
+.col-9 + .col-3 {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 1rem;
+	vertical-align: top;
+	width: 100%;
+}
+.col-3 img,
+.col-4 img,
+.col-6 img,
+.col-8 img,
+.col-9 img,
+.col-12 img {
+	max-width: 100%;
+}
+.col-3 p,
+.col-4 p,
+.col-6 p,
+.col-8 p,
+.col-9 p,
+.col-12 p {
+	margin-bottom: 20px;
+}
+.text-center,
+.text-right,
+.text-left  {
+	text-align: center;
+}
+/*=================
+===== BUTTONS =====
+=================*/
+.button {
+  position:relative;
+  cursor: pointer;
+  padding: 20px;
+  background-image: linear-gradient(to right, #7dcad2 10%, #5394ac 60%, #386080 100%);
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  transition: transform 200ms ease-in-out;
+}
+.button-action-width {
+  width: 15%;
+  margin: auto;
+}
+.button-action-width-home {
+  width: 15%;
+  margin: 0;
+  margin-top: 3%;
+}
+.button-about-width {
+  width: 45%;
+  margin: auto;
+  margin-top: 5%;
+}
+.button-width{
+  width: 60%;
+  margin: auto;
+  margin-top: 10%;
+}
+.button-box{
+  padding: 0 0 5% 0;
+}
+.button:hover {
+  position: relative;
+  background: #7dcad2;
+}
+.button a {
+    font-weight:bold;
+    color: white;
+}
+.button:before,
+.button:after {
+    content:"";
+    position:absolute;
+    z-index:-1;
+}
+.lifted {
+    -moz-border-radius:4px;
+    border-radius:4px;
+    backface-visibility: hidden;
+}
+.lifted::after {
+    bottom:15px;
+    right:20px;
+    left:auto;
+    width:40%;
+    height:20%;
+    -webkit-box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    -webkit-transform:rotate(8deg);
+    -moz-transform:rotate(8deg);
+    -ms-transform:rotate(8deg);
+    -o-transform:rotate(8deg);
+    transform:rotate(8deg);
+}
+.modalDialog, .modalDialogWhy, .modalDialogUnique {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target, .modalDialogWhy:target, .modalDialogUnique:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 75%;
+	position: relative;
+	margin: 10% auto;
+	padding: 2%;
+	background: #fff;
+}
+.modalDialogWhy > div {
+	width: 75%;
+	position: relative;
+	margin: 10% auto;
+	padding: 2%;
+	background: #fff;
+}
+.modalDialogUnique > div {
+	width: 75%;
+	position: relative;
+	margin: 10% auto;
+	padding: 2%;
+	background: #fff;
+}
+.close {
+	background: #386080;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #7dcad2; }
+.button img {
+    width: 15%;
+    vertical-align: middle;
+    margin-left: 5%;
+}
+/*==============
+===== HOME =====
+==============*/
+.home{
+ background-image: url(../images/hero/home.jpg);
+ background-position: bottom;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+}
+.home p{
+ text-align: left;
+ color: white;
+}
+/*===========================
+===== INTRO T0 PRACTICE =====
+===========================*/
+.intro{
+  padding: 3% 0 3% 0;
+}
+.intro-box{
+  display: inline-block;
+  width: 45%;
+  padding: 2%;
+  vertical-align: middle;
+  min-width: 400px;
+}
+.intro .video {
+   position: relative;
+   width: 100%;
+   box-shadow: 5px 5px 10px rgba(68, 68, 68, 0.2);
+}
+.intro img{
+    width: 25%;
+    padding: 3%;
+    display: inline;
+    margin: auto;
+}
+/*=========================
+==== LEADING INSURERS =====
+=========================*/
+.insurers {
+    padding: 3% 0 3% 0;
+}
+.insurers .icon-box {
+	display: inline-block;
+  margin: 25px;
+	width: 175px;
+	padding: 0px;
+	margin-bottom: 50px;
+	vertical-align: middle;
+}
+.insurers a{
+  color: #7dcad2;
+}
+.insurers .icon-box img {
+  width: 175px;
+}
+/*==========================================
+==== ANTERIOR SPINE/LIS ACCESS SURGERY =====
+==========================================*/
+.surgery {
+	position: relative;
+ background: linear-gradient(45deg, rgba(125, 202, 210, 1.0) 50%, rgba(228, 239, 233, 1.0) 100%);
+}
+.surgery .box {
+	display: inline-block;
+	width: 300px;
+	height: 425px;
+	padding: 3% 1%;
+	vertical-align: top;
+	background: #fff;
+	margin: 25px 10px 50px 10px;
+	box-shadow: 5px 5px 10px rgba(68, 68, 68, 0.2);
+}
+.surgery p{
+  padding: 8%;
+}
+.box img {
+	padding-bottom: 3%;
+	margin: 0 auto;
+  width: 70px;
+}
+/*======================
+==== ABOUT THE DR. =====
+======================*/
+.about{
+   padding: 3%;
+ }
+ .fixed-ratio-resize { /* basic responsive img */
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* IE8 */
+}
+.about img{
+  float: left;
+  width: 60%;
+  height: auto;
+  min-width: 380px;
+  display: inline-block;
+  box-shadow: 2px 2px 30px rgba(80, 80, 80, 0.2);
+}
+ .about .icon-box {
+   vertical-align: top;
+   margin: 20% 1% 3% -5%;
+   padding: 5%;
+   display: inline-block;
+ 	 width: 40%;
+   min-width: 414px;
+   background-color: #7dcad2;
+   box-shadow: 2px 2px 30px rgba(80, 80, 80, 0.5);
+}
+.about .icon-box p{
+  margin-top: 25px;
+  color: #fff;
+}
+/*====================
+===== PROCEDURES =====
+====================*/
+ .procedure{
+  padding: 3%;
+ }
+.procedure .icon-box {
+ 	display: inline-block;
+  background-color: #7dcad2;
+ 	min-width: 425px;
+  height: 500px;
+ 	padding: 3% 2% 0 2%;
+ 	font-size: 1rem;
+ 	vertical-align: top;
+  box-shadow: 15px 15px 30px rgba(80, 80, 80, 0.2);
+ }
+ .procedure p{
+   margin: auto;
+   padding-bottom: 3%;
+   width: 60%;
+   min-width: 375px;
+ }
+.procedure .icon-box p{
+  padding: 8%;
+  color: white;
+ }
+ /*==========================================
+ ==== ANTERIOR SPINE/LIS ACCESS SURGERY =====
+ ==========================================*/
+.resources {
+  padding: 3%;
+ }
+ .resources-box{
+   min-width: 425px;
+   background-color: #7dcad2;
+   padding-bottom: 5%;
+   box-shadow: 15px 15px 30px rgba(80, 80, 80, 0.2);
+ }
+.resources p{
+  font-size: 1.25rem;
+  color: white;
+  padding: 0 5% 5% 5%;
+}
+/*======================
+===== TESTIMONIALS =====
+======================*/
+.testimonial{
+	position: relative;
+  margin-bottom: 5%;
+ }
+
+.testimonial p {
+  margin: 0 9% 0 9%;
+}
+
+.testimonial h4{
+  text-align: left;
+  margin-top: 2%;
+  margin-left: 15%;
+}
+.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__prev > label:nth-child(6),
+.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__next > label:nth-child(2),
+.carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1),
+.carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__next > label:nth-child(3),
+.carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2),
+.carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__next > label:nth-child(4),
+.carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__prev > label:nth-child(3),
+.carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__next > label:nth-child(5),
+.carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__prev > label:nth-child(4),
+.carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__next > label:nth-child(6),
+.carousel > input[type="radio"]:nth-child(6):checked ~ .carousel__prev > label:nth-child(5),
+.carousel > input[type="radio"]:nth-child(6):checked ~ .carousel__next > label:nth-child(1) {
+  opacity: 1 !important;
+  z-index: 3;
+}
+.container {
+  width: 85%;
+  height: 250px;
+  margin: 0 auto;
+}
+.carousel {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.carousel > input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  top: 0;
+}
+.carousel > input[type="radio"]:checked ~ .carousel__items .carousel__item,
+.carousel > input[type="radio"]:checked ~ .carousel__prev > label,
+.carousel > input[type="radio"]:checked ~ .carousel__next > label {
+  opacity: 0;
+}
+.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
+  opacity: 1;
+}
+.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
+  background: #386080;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
+  opacity: 1;
+}
+.carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
+  background: #386080;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
+  opacity: 1;
+}
+.carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
+  background: #386080;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__items .carousel__item:nth-child(4) {
+  opacity: 1;
+}
+.carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__nav > label:nth-child(4) {
+  background: #386080;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__items .carousel__item:nth-child(5) {
+  opacity: 1;
+}
+.carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__nav > label:nth-child(5) {
+  background: #386080;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type="radio"]:nth-child(6):checked ~ .carousel__items .carousel__item:nth-child(6) {
+  opacity: 1;
+}
+.carousel > input[type="radio"]:nth-child(6):checked ~ .carousel__nav > label:nth-child(6) {
+  background: #386080;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel__items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.carousel__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+}
+.carousel__item img {
+  width: 100%;
+  vertical-align: middle;
+}
+.carousel__prev > label, .carousel__next > label {
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+.carousel__prev > label:hover, .carousel__prev > label:focus, .carousel__next > label:hover, .carousel__next > label:focus {
+  opacity: .5 !important;
+}
+.carousel__prev > label:before, .carousel__prev > label:after, .carousel__next > label:before, .carousel__next > label:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.carousel__prev > label:before, .carousel__next > label:before {
+  border: solid #386080;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.carousel__prev > label:before {
+  left: 25%;
+}
+.carousel__next > label {
+  right: 0;
+}
+.carousel__next > label:before {
+  right: 25%;
+  transform: rotate(310deg);
+  -webkit-transform: rotate(310deg);
+}
+.carousel__nav {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+}
+.carousel__nav > label {
+  background-color: #acdfe5;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 .125%;
+  width: 10px;
+  height: 10px;
+}
+/*===============
+===== MEDIA =====
+===============*/
+/*==== PHONE - portrait =====*/
+@media only screen
+and (max-width: 480px)
+and (orientation: portrait) {
+h4{
+   font-size: 1.75em;
+   font-weight: 400;
+   text-align: center;
+}
+/*---phone-portrait-hero---*/
+.home{
+    position: relative;
+    background-size: contain;
+    background-image: url(../images/hero/home-768.jpg);
+    background-position: center;
+    background-color: transparent;
+    z-index: -1;
+}
+.home video {
+    display: none;
+}
+#bodymovin{
+    z-index: 1;
+    width: 55%;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    padding: 60% 0 0 2%;
+}
+/*---phone-portrait-intro---*/
+.intro .arrow{
+  margin-top: -60%;
+}
+.intro .arrow img{
+  width: 6%;
+}
+.intro h3{
+  padding-top: 30%
+}
+.insurers .icon-box {
+	display: inline-block;
+  margin: 10px;
+	width: 175px;
+	padding: 0px;
+	margin-bottom: 20px;
+	vertical-align: middle;
+}
+/*---phone-portrait-surgery---*/
+.surgery .box {
+	display: inline-block;
+	border-style: none;
+  border-width: 2px;
+  border-color: #7dcad2;
+	width: 300px;
+	height: 350px;
+	padding: 0;
+	font-size: 1rem;
+	vertical-align: top;
+	background: none;
+	margin: 0px 10px 50px 10px;
+	box-shadow: none;
+}
+.surgery h3{
+  width: 95%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+.about{
+   padding: 0%;
+ }
+.about img{
+  width: 55%;
+  height: auto;
+  min-width: 414px;
+  display: inline-block;
+  box-shadow: 2px 2px 30px rgba(80, 80, 80, 0.2);
+}
+ .about .icon-box {
+   vertical-align: top;
+   margin: 0;
+   padding: 6%;
+   display: inline-block;
+ 	 width: 40%;
+   min-width: 414px;
+   background-color: #7dcad2;
+   box-shadow: 2px 2px 30px rgba(80, 80, 80, 0.2);
+}
+.about .icon-box p{
+  margin-top: 25px;
+  color: #fff;
+}
+.procedure{
+  background-color: #7dcad2;
+}
+.procedure p{
+  padding: 5%;
+  margin: auto;
+}
+.procedure .icon-box {
+ 	display: inline-block;
+  background-color: transparent;
+ 	min-width: 425px;
+  height: 600px;
+ 	padding: 2% 2% 0 2%;
+ 	font-size: 1rem;
+ 	vertical-align: top;
+  box-shadow: none;
+ }
+.resources {
+  padding: 0;
+}
+.resources-box{
+  min-width: 425px;
+  background-color: transparent;
+  padding-bottom: 5%;
+  box-shadow: 15px 15px 30px rgba(80, 80, 80, 0.2);
+}
+.resources p{
+  color: #505050;
+}
+
+/*---phone-portrait-testimonial---*/
+.testimonial{
+  display: none;
+}
+/*---phone-portrait-call-to-action---*/
+.call-to-action .button-box .button-action-width {
+  width: 50%;
+  margin: auto;
+}
+.resources .button-action-width {
+  width: 50%;
+  margin: auto;
+}
+}
+/*==== TABLET =====*/
+@media only screen
+and ( min-width: 481px)
+and ( max-width: 768px){
+  .home{
+    position: relative;
+    background-image: url(../images/hero/home-768.jpg);
+    background-position: right;
+    height: 800px;
+  }
+  .home .color-overlay{
+    height: 800px;
+  }
+  .home .wrapper{
+    padding-top: 50%
+  }
+  .home .button-action-width-home{
+    width: 35%;
+  }
+  #bodymovin{
+    z-index: 1;
+    position:absolute;
+    background: transparant;
+    width: 50%;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    padding: 30% 0 0 5%;
+  }
+  .home video{
+    display: none;
+  }
+  .about img{
+    width: 70%;
+    float: left;
+    height: auto;
+    min-width: 380px;
+    display: inline-block;
+    box-shadow: 2px 2px 30px rgba(80, 80, 80, 0.2);
+  }
+   .about .icon-box {
+     vertical-align: top;
+     margin: -25% 1% 5% 40%;
+     padding: 5%;
+     display: inline-block;
+   	 width: 40%;
+     min-width: 414px;
+     background-color: #7dcad2;
+     box-shadow: 2px 2px 30px rgba(80, 80, 80, 0.4);
+  }
+  .procedure{
+    background-color: #7dcad2;
+  }
+  .procedure .icon-box {
+   	display: inline-block;
+    background-color: transparent;
+   	min-width: 425px;
+    height: 600px;
+   	padding: 2% 2% 0 2%;
+   	font-size: 1rem;
+   	vertical-align: top;
+    box-shadow: none;
+  }
+  .resources {
+    padding: 5% 0 5% 0;
+  }
+  .resources-box{
+    min-width: 425px;
+    background-color: transparent;
+    padding-bottom: 5%;
+    box-shadow: none;
+  }
+  .resources p{
+    color: #505050;
+  }
+  .button-width{
+    width: 70%;
+    margin: auto;
+    margin-top: 10%;
+  }
+  .button-action-width{
+    width: 30%;
+  }
+}
+/*==== TABLET =====*/
+@media only screen
+and ( min-width: 769px)
+and ( max-width: 1024px){
+/*---tablet and landscape-hero---*/
+.home{
+  position: relative;
+  background-image: url(../images/hero/home-1024.jpg);
+  background-position: right;
+}
+#bodymovin{
+  z-index: 1;
+  position:absolute;
+  background: transparant;
+  width: 45%;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  padding: 25% 0 0 8%;
+}
+.home video{
+  display: none;
+}
+.about img{
+  width: 60%;
+  float: left;
+  height: auto;
+  min-width: 380px;
+  display: inline-block;
+  box-shadow: 2px 2px 30px rgba(80, 80, 80, 0.2);
+}
+ .about .icon-box {
+   vertical-align: top;
+   margin: -25% 1% 5% 45%;
+   padding: 5%;
+   display: inline-block;
+   width: 50%;
+   min-width: 414px;
+   background-color: #7dcad2;
+   box-shadow: 2px 2px 30px rgba(80, 80, 80, 0.4);
+}
+.procedure{
+  background-color: #7dcad2;
+}
+.procedure .icon-box {
+ 	display: inline-block;
+  background-color: transparent;
+ 	min-width: 425px;
+  height: 600px;
+ 	padding: 2% 2% 0 2%;
+ 	font-size: 1rem;
+ 	vertical-align: top;
+  box-shadow: none;
+}
+.resources {
+  padding: 5% 0 5% 0;
+}
+.resources-box{
+  min-width: 425px;
+  background-color: transparent;
+  padding-bottom: 5%;
+  box-shadow: none;
+}
+.resources p{
+  color: #505050;
+}
+.button-width{
+  width: 70%;
+  margin: auto;
+  margin-top: 10%;
+}
+.button-action-width{
+  width: 30%;
+}
+}
+@media only screen
+and ( min-width: 1025px)
+and (orientation : landscape){
+#bodymovin{
+  display: none
+}
+}

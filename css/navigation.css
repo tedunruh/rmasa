@@ -1,0 +1,222 @@
+
+/*====================
+===== NAV-BUTTON =====
+====================*/
+
+.nav-button {
+    position:relative;
+    cursor: pointer;
+    right: 6%;
+    padding: 20px;
+    background-image: linear-gradient(to right, #7dcad2 10%, #5394ac 60%, #386080 100%);
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+		transition: transform 200ms ease-in-out;
+}
+
+/*padding: 20px 30px 0 30px;
+margin: 0px 5px 15px 0;*/
+
+.nav-button:hover {
+	position: relative;
+  background: #7dcad2;
+}
+
+.nav-button:before,
+.nav-button:after {
+    content:"";
+    position:absolute;
+    z-index:-1;
+}
+
+.nav-button p {
+    font-size: 1.1rem;
+    font-weight:bold;
+    color: white;
+    text-align: center;
+  	text-transform: uppercase;
+}
+
+.nav-lifted {
+	-moz-border-radius:0 0 4px 4px;
+	border-radius:0 0 4px 4px;
+}
+
+.nav-lifted:after {
+    bottom:15px;
+    right:20px;
+    left:auto;
+    width:40%;
+    height:20%;
+    -webkit-box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    box-shadow:20px 15px 8px rgba(0, 0, 0, 0.7);
+    -webkit-transform:rotate(8deg);
+    -moz-transform:rotate(8deg);
+    -ms-transform:rotate(8deg);
+    -o-transform:rotate(8deg);
+    transform:rotate(8deg);
+}
+
+/*====================
+===== NAVIGATION =====
+====================*/
+
+.nav{
+  position: fixed;
+  height: 130px;
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+}
+.nav img{
+  height: 90px;
+	float: left;
+	position:absolute;
+  left:2%;
+  top:20%;
+}
+.nav-list{
+  width: 100%;
+  float: right;
+	padding-top: 20px;
+  padding-left: 350px;
+}
+.nav-list li{
+  display: inline-block;
+  padding: 0px 15px;
+}
+.nav-list a{
+  text-align: center;
+  display: block;
+	color: #505050;
+  font-size: 1.25rem;
+}
+.nav-list a:hover{
+	color: #7dcad2;
+  background: transparent;
+}
+.nav-list li:hover ul{
+	opacity: 1;
+	visibility: visible;
+}
+.nav-list li li a{
+	min-width: 200px;
+	padding: 5px 5px;
+}
+.nav-list li ul{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 130px;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.5);
+  border-top: 5px solid #7dcad2;
+}
+.nav-list li li a{
+  padding: 20px 10px;
+}
+
+.panel{
+  display: none;
+}
+
+/* Mobile nav */
+.nav-mobile{
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top: 60px;
+	right: 50px;
+	background:url(http://www.rockymountainasa.com/images/nav.svg) no-repeat center center;
+	height:40px;
+	width:40px;
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen
+and (max-width: 1024px){
+.nav-mobile {
+	display:block;
+	padding-top: 75px;
+}
+.nav {
+	width:100%;
+}
+.nav img {
+	height: 80px;
+}
+.nav-list {
+  width:100%;
+	display:none;
+  position: absolute;
+  top: 130px;
+  background-color: white;
+	box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.5);
+	padding: 25px 25px 25px 0;
+	border-top: 5px solid #7dcad2;
+}
+.nav-list li{
+  width:50%;
+  padding:10px;
+	display: block;
+}
+.nav-active{
+	display:block;
+}
+p.accordion {
+  margin-top: -25px;
+  display: inline;
+    color: #386080;
+    width: 20%;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 5%;
+    transition: 1s;
+}
+.accordion:before {
+  margin-top: -15px;
+  margin-right: 20px;
+  content: '+';
+  font-size: 2em;
+  color: #7dcad2;
+  float: left;
+  margin-left: 5px;
+}
+.accordion.active:before {
+    content: "-";
+}
+.panel {
+    padding: 0 18px;
+    padding-top: 15px;
+    margin: 10%
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    opacity: 0;
+    margin-bottom:10px;
+}
+.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+.nav-list li{
+  width: 100%;
+}
+.nav-list li ul{
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: white;
+  box-shadow: none;
+  border-top: 1px solid #7dcad2;
+}
+}

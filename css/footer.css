@@ -1,0 +1,79 @@
+/*========================
+===== CALL TO ACTION =====
+========================*/
+.call-to-action {
+   padding: 5% 0 0 0;
+   position: relative;
+   background: linear-gradient(45deg, #7dcad2 0%, #e4efe9 100%);
+}
+.call-to-action h4{
+  padding-bottom: 3%;
+}
+/*================
+===== FOOTER =====
+================*/
+footer {
+	position: relative;
+	padding: 3%;
+	padding-top: 75px;
+	background: #3a444c;
+}
+.footer-box {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5%;
+}
+.footer-box img{
+  padding-bottom: 2%;
+}
+footer li {
+	list-style-type: none;
+	padding-bottom: 5px;
+
+}
+footer li a {
+	display: inline-block;
+}
+.back-to-top {
+	position: absolute;
+	top:-40px;
+	left: 50%;
+	margin-left:-50px;
+	background: #2c3e50;
+	border: solid #2c3e50 10px;
+}
+footer .back-to-top i {
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+}
+.footer2 {
+  padding: 3%;
+  width: 100%;
+  position: relative;
+  background-color: #262d33;
+}
+/*===============
+===== MEDIA =====
+===============*/
+@media only screen
+and (max-device-width: 480px)
+and (orientation: portrait) {
+/*---media-call to action---*/
+.call-to-action h4 {
+	font-size: 1em;
+}
+.footer-box {
+	padding: 5% 10% 5% 10%;
+}
+}
+@media only screen
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+	.footer-box {
+		padding: 5% 10% 5% 10%;
+	}
+  .call-to-action .button-box .button-action-width{
+    width: 40%;
+  }
+}
